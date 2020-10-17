@@ -1,7 +1,8 @@
 # 基于费马小定理的素性检测
 西电网信院的《信息安全与密码学基础实验》课程实验1——基于费马小定理的素性检测，供大家学习参考
 
-'''python
+
+
 """
     Primality Testing by Fermat's Little Theorem
     基于费马小定理的素性检测
@@ -49,4 +50,3 @@ for i in range(0,k):
         print("用",a,"已经判断出是合数")
         exit(2)
 print("m是素数的概率是",1-1/2**k)
-'''
