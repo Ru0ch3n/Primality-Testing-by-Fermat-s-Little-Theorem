@@ -2,10 +2,7 @@
     Primality Testing by Fermat's Little Theorem
     基于费马小定理的素性检测
 
-    @author:柴若晨
-    @num:18180200028
-    @class:1818039
-    人生苦短，我用Py
+    @author:Chai
 """
 
 """
