@@ -1,6 +1,6 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
+#在线测试，出现error正常，因为exit()作用，参考输出判断代码正确性就行
 name: Python application
 
 on:
@@ -24,6 +24,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install egcd
+#第一个参数是检测值，第二个参数是安全系数k
     - name: Test
       run: |
         python ./main.py 151651651651616512312134984984946131555555555555555555555555555555555555555555556971 7
