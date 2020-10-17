@@ -26,4 +26,4 @@ jobs:
         pip install egcd
     - name: Test
       run: |
-        python ./main.py
+        python ./main.py 151651651651616512312134984984946131555555555555555555555555555555555555555555556971 7
