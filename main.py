@@ -13,16 +13,23 @@
 """
 from random import *
 from egcd import egcd as gcd
+import sys
+
 """
     Initialize
 """
-#target储存目标数
-target = eval(input("请输入target number"))
-if(target%2 == 0):
-    print("输入的不是奇整数，是偶数")
-    exit(2)
-#k存储安全参数k
-k = eval(input("请输入安全参数k\n"))
+if len(sys.argv) == 3:
+    target =  eval(sys.argv[1])
+    k = eval(sys.argv[2])
+else:
+    #target储存目标数
+    target = eval(input("请输入target number"))
+    if(target%2 == 0):
+        print("输入的不是奇整数，是偶数")
+        exit(2)
+    #k存储安全参数k
+    k = eval(input("请输入安全参数k\n"))
+
 #用概率ans定义是素数的概率，设初值为0
 ans = 0
 #a存储[2,m-2]中的一个随机数，先随意设个初值为-1
@@ -41,5 +48,4 @@ for i in range(0,k):
     if(((a**(target-1))-1)%target != 0):
         print("用",a,"已经判断出是合数")
         exit(2)
-    
 print("m是素数的概率是",1-1/2**k)
