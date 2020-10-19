@@ -1,7 +1,6 @@
 """
     Primality Testing by Fermat's Little Theorem
     基于费马小定理的素性检测
-
     @author:Chai
 """
 
@@ -9,7 +8,7 @@
     Dependencies
 """
 from random import *
-from egcd import egcd as gcd
+from math import gcd
 import sys
 
 """
@@ -40,9 +39,9 @@ for i in range(0,k):
     #选取一个[2,m-2]的数字，即[2,m-1)。注意randint下是左开右闭区间
     a = randint(2,target-1)
     if(gcd(a,target) != 1):
-        print("用",a,"已经判断出是合数")
+        print("用",a,"与它非互素已经判断出是合数")
         exit(2)
-    if(((a**(target-1))-1)%target != 0):
+    if(pow(a,target-1,target)!=1):
         print("用",a,"已经判断出是合数")
         exit(2)
 print("m是素数的概率是",1-1/2**k)
